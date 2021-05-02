@@ -58,7 +58,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="20dp"
                 android:textSize="40sp"
-                android:text="10,000,000"
+                android:text="200,000"
                 android:textAlignment="center"
                 android:gravity="center_horizontal" />
 
@@ -127,7 +127,7 @@
                     android:ems="10"
                     android:gravity="center_horizontal"
                     android:inputType="textPersonName"
-                    android:text="1,160,555"
+                    android:text="2,160,000"
                     android:textAlignment="center"
                     android:textSize="40sp" />
 
@@ -155,7 +155,7 @@
                     android:ems="10"
                     android:gravity="center_horizontal"
                     android:inputType="textPersonName"
-                    android:text="1,160,555"
+                    android:text="2,140,000"
                     android:textAlignment="center"
                     android:textSize="40sp" />
             </LinearLayout>

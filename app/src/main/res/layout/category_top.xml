@@ -297,7 +297,7 @@
                             android:id="@+id/top1LastCost"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"
+                            android:text="51,250"
                             android:textSize="10sp" />
 
                         <TextView
@@ -318,7 +318,7 @@
                         android:id="@+id/top1Recommend"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="0"
+                        android:text="50,000"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
 
@@ -391,7 +391,7 @@
                             android:id="@+id/top2LastCost"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"
+                            android:text="450,000"
                             android:textSize="10sp" />
 
                         <TextView
@@ -412,7 +412,7 @@
                         android:id="@+id/top2Recommend"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
+                        android:text="410,000"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
 
@@ -485,7 +485,7 @@
                             android:id="@+id/top3LastCost"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"
+                            android:text="300,500"
                             android:textSize="10sp" />
 
                         <TextView
@@ -506,7 +506,7 @@
                         android:id="@+id/top3Recommend"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="0"
+                        android:text="360,000"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
 
