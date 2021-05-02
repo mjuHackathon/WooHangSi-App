@@ -81,7 +81,7 @@
                 android:id="@+id/income"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1,900,501"
+                android:text="3,000,000"
                 android:textSize="30sp" />
 
             <TextView
@@ -110,7 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="3,900,501"
+                android:text="2,974,500"
                 android:textSize="30sp" />
 
             <TextView

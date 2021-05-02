@@ -162,8 +162,8 @@ public class SpendThreeMonth extends AppCompatActivity {
                         @Override
                         public void run() {
                             try {
-                                txtMonth1.setText(jsonArray2.getJSONObject(0).getString("month"));
-                                Month1_money.setText(jsonArray2.getJSONObject(0).getString("spending"));
+                                txtMonth2.setText(jsonArray2.getJSONObject(0).getString("month"));
+                                Month2_money.setText(jsonArray2.getJSONObject(0).getString("spending"));
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
@@ -188,8 +188,8 @@ public class SpendThreeMonth extends AppCompatActivity {
                         @Override
                         public void run() {
                             try {
-                                txtMonth1.setText(jsonArray3.getJSONObject(0).getString("month"));
-                                Month1_money.setText(jsonArray3.getJSONObject(0).getString("spending"));
+                                txtMonth3.setText(jsonArray3.getJSONObject(0).getString("month"));
+                                Month3_money.setText(jsonArray3.getJSONObject(0).getString("spending"));
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
