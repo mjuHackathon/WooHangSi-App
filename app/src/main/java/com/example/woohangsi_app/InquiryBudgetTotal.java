@@ -18,6 +18,8 @@ import com.example.woohangsi_app.DB.Entire;
 import com.example.woohangsi_app.DB.RequestAPI;
 import com.google.android.material.navigation.NavigationView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.w3c.dom.Text;
 
 import java.io.IOException;
@@ -31,6 +33,9 @@ public class InquiryBudgetTotal extends AppCompatActivity {
     TextView txtCustomer, txtMonth, Budget_view;
     LinearLayout Budget_view_btn;
     Button btnEdit;
+
+    RequestAPI requestAPI;
+    String data;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,24 +121,10 @@ public class InquiryBudgetTotal extends AppCompatActivity {
         txtMonth = (TextView)findViewById(R.id.txtMonth);
         Budget_view = (TextView) findViewById(R.id.Budget_view);
 
-//        Thread thread = new Thread() {
-//            public void run() {
-//                try {
-//                    Entire entire = new Entire();
-//
-//                    RequestAPI requestAPI = new RequestAPI();
-//
-//                    String data = requestAPI.requestPost(entire.getRootUrl(), entire.getRootBody(1,"5"));
-//                    Budget_view.setText(data);
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        };
-//        thread.start();
-
-
         btnEdit = (Button)findViewById(R.id.btnEdit);
+
+        Entire entire = new Entire();
+        handlePost(entire.getRootUrl(), entire.getRootBody(1,"5"));
 
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -144,6 +135,32 @@ public class InquiryBudgetTotal extends AppCompatActivity {
         });
 
     }
+
+    public void handlePost(String subUrl, String bodyString) {
+        Thread thread = new Thread() {
+            public void run() {
+                try {
+                    requestAPI = new RequestAPI();
+                    data = requestAPI.requestPost(subUrl, bodyString);
+                    JSONArray jsonArray1 = new JSONArray(data);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                Budget_view.setText(jsonArray1.getJSONObject(0).getString("budget"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
+                } catch (IOException | JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        thread.start();
+    }
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         barDrawerToggle.onOptionsItemSelected(item);
