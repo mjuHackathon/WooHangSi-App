@@ -101,11 +101,8 @@ public class DrawerActivity extends AppCompatActivity {
         //삼선 아이콘과 화살표아이콘이 자동으로 변환하도록
         drawerLayout.addDrawerListener(barDrawerToggle);
 
-    }//onCreate method..
+    }
 
-    //액션바의 메뉴를 클릭하는 이벤트를 듣는
-    //메소드를 통해서 클릭 상황을 전달하도록..
-    //토글 버튼이 클릭 상황을 인지하도록..
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         barDrawerToggle.onOptionsItemSelected(item);

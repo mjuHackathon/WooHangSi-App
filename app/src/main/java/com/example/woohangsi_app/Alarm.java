@@ -42,7 +42,7 @@ public class Alarm extends AppCompatActivity {
 
     NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
 
-    Intent notificationIntent = new Intent(this, ResultActivity.class);
+    Intent notificationIntent = new Intent(this, Alarm.class);
     notificationIntent.putExtra("notificationId", count); //전달할 값
     notificationIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK) ;
     PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent,  PendingIntent.FLAG_UPDATE_CURRENT);

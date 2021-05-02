@@ -21,7 +21,7 @@ public class FixedSpend extends Fragment implements View.OnClickListener{
     LinearLayout food, cafe, alchol, life, shopping, fashion, beauty, traffic, car, house, health, capital,
             culture, travel, educate, children, pet, present;
 
-    Button btnSelect;
+    Button btnSelect, btnSave;
 
     LinearLayout [] layoutarray;
     String [] categoryArray;
@@ -55,6 +55,7 @@ public class FixedSpend extends Fragment implements View.OnClickListener{
         present = (LinearLayout) view.findViewById(R.id.present);
 
         btnSelect = (Button) view.findViewById(R.id.btnSelect);
+        btnSave = (Button) view.findViewById(R.id.btnSave);
 
         layoutarray = new LinearLayout[] {food, cafe, alchol, life, shopping, fashion, beauty, traffic, car, house, health, capital, culture, travel, educate, children, pet, present};
 

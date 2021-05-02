@@ -9,20 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WooHangSiApp">
-        <activity android:name=".BudgetCategory">
+
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ResultActivity"
-            android:parentActivityName=".MainActivity" >
+        <activity android:name=".AddBudgetCustom">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".AddBudgetCustom"/>
+
         <activity android:name=".Alarm"/>
         <activity android:name=".BrandCustom"/>
-<!--        <activity android:name=".BudgetCategory"/>-->
+        <activity android:name=".BudgetCategory"/>
         <activity android:name=".BudgetCheck"/>
         <activity android:name=".BudgetMonthly"/>
         <activity android:name=".BudgetTotal"/>
@@ -33,7 +36,7 @@
         <activity android:name=".InquiryBudgetCategory"/>
         <activity android:name=".InquiryBudgetCustom"/>
         <activity android:name=".InquiryBudgetTotal"/>
-        <activity android:name=".MainActivity"/>
+<!--        <activity android:name=".MainActivity"/>-->
         <activity android:name=".SelfAddBudgetCustom"/>
         <activity android:name=".SpendThreeMonth"/>
         <activity android:name=".TopCategory"/>

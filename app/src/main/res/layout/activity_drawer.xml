@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/layout_drawer"
-    tools:context=".MainActivity">
+    android:id="@+id/layout_drawer">
 
     <!--    1. 화면을 구성하는 Content 영역-->
     <RelativeLayout
