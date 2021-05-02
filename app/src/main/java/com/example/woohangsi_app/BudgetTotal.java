@@ -20,6 +20,9 @@ import com.example.woohangsi_app.DB.Entire;
 import com.example.woohangsi_app.DB.RequestAPI;
 import com.google.android.material.navigation.NavigationView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
 import java.io.IOException;
 
 public class BudgetTotal extends AppCompatActivity {
@@ -32,6 +35,9 @@ public class BudgetTotal extends AppCompatActivity {
     EditText Budget_write;
     LinearLayout Budget_write_btn;
     Button btnApply, btnCancel;
+
+    RequestAPI requestAPI;
+    String data;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,23 +132,18 @@ public class BudgetTotal extends AppCompatActivity {
         btnApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Entire entire = new Entire();
-//                RequestAPI requestAPI = null;
-//                try {
-//                    requestAPI = new RequestAPI();
-//                    requestAPI.requestPost(entire.getAddUrl(), entire.getAddBody(Integer.parseInt(Budget_write.getText().toString()),1,"5"));
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-
                 Budget_write.setText(Budget_write.getText().toString());
                 Intent intent = new Intent();
                 intent.putExtra("total", Budget_write.getText().toString());
                 setResult(RESULT_OK, intent);
 
+                String value = Budget_write.getText().toString();
+                int budget = Integer.parseInt(value);
+
+                Entire entire = new Entire();
+                handlePost(entire.getAddUrl(), entire.getAddBody(budget, 1,"5"));
             }
         });
-
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -151,6 +152,21 @@ public class BudgetTotal extends AppCompatActivity {
             }
         });
     }
+
+    public void handlePost(String subUrl, String bodyString) {
+        Thread thread = new Thread() {
+            public void run() {
+                try {
+                    requestAPI = new RequestAPI();
+                    data = requestAPI.requestPost(subUrl, bodyString);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        thread.start();
+    }
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         barDrawerToggle.onOptionsItemSelected(item);
