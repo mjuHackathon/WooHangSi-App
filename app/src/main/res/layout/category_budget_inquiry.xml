@@ -124,8 +124,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:visibility="gone"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="visible">
 
                 <ImageView
                     android:layout_width="80dp"
@@ -161,7 +161,7 @@
                             android:id="@+id/cafeLastCost"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"
+                            android:text="40만"
                             android:textSize="10sp" />
 
                         <TextView
@@ -187,16 +187,16 @@
                         android:id="@+id/cafeBudget"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
+                        android:text="35만"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
                         android:text="원"
                         android:textColor="#673AB7"
-                        android:layout_marginRight="15dp"
                         android:textSize="30sp" />
                 </LinearLayout>
 
