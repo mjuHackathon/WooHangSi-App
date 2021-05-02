@@ -14,6 +14,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.woohangsi_app.DB.Category;
+import com.example.woohangsi_app.DB.RequestAPI;
+
+import java.io.IOException;
+
 public class BudgetCategory extends AppCompatActivity {
 
     public static final int REQUEST_CODE_MENU=101;
