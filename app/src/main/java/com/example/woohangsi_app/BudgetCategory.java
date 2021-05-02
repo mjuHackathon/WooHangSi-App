@@ -54,6 +54,7 @@ public class BudgetCategory extends AppCompatActivity {
     LinearLayout [] layoutarray;
     String [] categoryArray;
     boolean [] checkArray;
+    EditText [] editTextArray;
 
     NavigationView navigationView;
     DrawerLayout drawerLayout;
@@ -205,7 +206,7 @@ public class BudgetCategory extends AppCompatActivity {
         checkArray = new boolean[]{false, false, false, false, false, false, false, false, false, false,
                 false, false, false, false, false, false, false, false};
 
-
+        editTextArray = new EditText[] {foodBudget, cafeBudget, alcholBudget, lifeBudget, shoppingBudget, fashionBudget, beautyBudget, trafficBudget, carBudget, houseBudget, healthBudget, capitalBudget, cultureBudget, travelBudget, educateBudget, childrenBudget, petBudget, presentBudget};
         btnSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -246,7 +247,12 @@ public class BudgetCategory extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                for (int i=0; i<checkArray.length;i++) {
+                    if (checkArray[i]==true) {
+                        Category category = new Category();
+                        handlePostBtn(category.getBudgetAddUrl(),category.getBudgetAddBody(Integer.parseInt(editTextArray[i].getText().toString()),1,"C00"+Integer.toString(i+1),"5"));
+                    }
+                }
             }
         });
     }
@@ -309,6 +315,18 @@ public class BudgetCategory extends AppCompatActivity {
 
     }
 
-   
+    public void handlePostBtn(String subUrl, String bodyString) {
+        Thread thread = new Thread() {
+            public void run() {
+                try {
+                    RequestAPI requestAPI = new RequestAPI();
+                    requestAPI.requestPost(subUrl, bodyString);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        thread.start();
+    }
 
 }

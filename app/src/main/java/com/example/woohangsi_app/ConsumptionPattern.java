@@ -130,7 +130,7 @@ public class ConsumptionPattern extends AppCompatActivity {
         inquiry_pattern_money = (TextView) findViewById(R.id.inquiry_pattern_money);
 
         pattern_img = (ImageView) findViewById(R.id.pattern_img);
-        inquiry_pattern_img = (ImageView) findViewById(R.id.inquiry_pattern_img);
+//        inquiry_pattern_img = (ImageView) findViewById(R.d);
 
         Handler handler = new Handler();
 

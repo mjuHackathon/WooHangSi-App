@@ -16,7 +16,11 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.woohangsi_app.DB.Entire;
+import com.example.woohangsi_app.DB.RequestAPI;
 import com.google.android.material.navigation.NavigationView;
+
+import java.io.IOException;
 
 public class BudgetTotal extends AppCompatActivity {
     NavigationView navigationView;
@@ -122,10 +126,20 @@ public class BudgetTotal extends AppCompatActivity {
         btnApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                Entire entire = new Entire();
+//                RequestAPI requestAPI = null;
+//                try {
+//                    requestAPI = new RequestAPI();
+//                    requestAPI.requestPost(entire.getAddUrl(), entire.getAddBody(Integer.parseInt(Budget_write.getText().toString()),1,"5"));
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+
                 Budget_write.setText(Budget_write.getText().toString());
                 Intent intent = new Intent();
                 intent.putExtra("total", Budget_write.getText().toString());
                 setResult(RESULT_OK, intent);
+
             }
         });
 

@@ -89,7 +89,7 @@
                         android:id="@+id/Month1_money"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="100,000,000"
+                        android:text="110,000,000"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
 
@@ -148,7 +148,7 @@
                         android:id="@+id/Month2_money"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="100,000,000"
+                        android:text="130,000,000"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
 
@@ -205,7 +205,7 @@
                         android:id="@+id/Month3_money"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="100,000,000"
+                        android:text="120,000,000"
                         android:textColor="#673AB7"
                         android:textSize="30sp" />
 

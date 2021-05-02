@@ -14,9 +14,13 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.woohangsi_app.DB.Entire;
+import com.example.woohangsi_app.DB.RequestAPI;
 import com.google.android.material.navigation.NavigationView;
 
 import org.w3c.dom.Text;
+
+import java.io.IOException;
 
 public class InquiryBudgetTotal extends AppCompatActivity {
     NavigationView navigationView;
@@ -111,6 +115,23 @@ public class InquiryBudgetTotal extends AppCompatActivity {
         txtCustomer = (TextView)findViewById(R.id.txtCustomer);
         txtMonth = (TextView)findViewById(R.id.txtMonth);
         Budget_view = (TextView) findViewById(R.id.Budget_view);
+
+//        Thread thread = new Thread() {
+//            public void run() {
+//                try {
+//                    Entire entire = new Entire();
+//
+//                    RequestAPI requestAPI = new RequestAPI();
+//
+//                    String data = requestAPI.requestPost(entire.getRootUrl(), entire.getRootBody(1,"5"));
+//                    Budget_view.setText(data);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        };
+//        thread.start();
+
 
         btnEdit = (Button)findViewById(R.id.btnEdit);
 
