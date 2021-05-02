@@ -10,7 +10,14 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.woohangsi_app.DB.Entire;
+import com.example.woohangsi_app.DB.RequestAPI;
 import com.google.android.material.navigation.NavigationView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.io.IOException;
 
 public class SpendThreeMonth extends AppCompatActivity {
     NavigationView navigationView;
@@ -20,19 +27,22 @@ public class SpendThreeMonth extends AppCompatActivity {
 
     TextView txtCustomer, txtMonth1, txtMonth2, txtMonth3, Month1_money, Month2_money, Month3_money;
 
+    RequestAPI requestAPI;
+    String data;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.three_month_spend);
-        navigationView=findViewById(R.id.nav);
-        drawerLayout=findViewById(R.id.layout_drawer);
+        navigationView = findViewById(R.id.nav);
+        drawerLayout = findViewById(R.id.layout_drawer);
         navigationView.setItemIconTintList(null);
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.Main:
-                        Intent intent=new Intent(com.example.woohangsi_app.SpendThreeMonth.this,MainActivity.class);
+                        Intent intent = new Intent(com.example.woohangsi_app.SpendThreeMonth.this, MainActivity.class);
                         startActivity(intent);
                         break;
                     case R.id.totalBudget_inquiry:
@@ -92,7 +102,7 @@ public class SpendThreeMonth extends AppCompatActivity {
             }
         });
 
-        barDrawerToggle= new ActionBarDrawerToggle(this, drawerLayout, R.string.app_name,R.string.app_name);
+        barDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.app_name, R.string.app_name);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -105,10 +115,94 @@ public class SpendThreeMonth extends AppCompatActivity {
         txtMonth1 = (TextView) findViewById(R.id.txtMonth1);
         txtMonth2 = (TextView) findViewById(R.id.txtMonth2);
         txtMonth3 = (TextView) findViewById(R.id.txtMonth3);
-        Month1_money = (TextView)findViewById(R.id.Month1_money);
-        Month2_money = (TextView)findViewById(R.id.Month2_money);
-        Month3_money = (TextView)findViewById(R.id.Month3_money);
+        Month1_money = (TextView) findViewById(R.id.Month1_money);
+        Month2_money = (TextView) findViewById(R.id.Month2_money);
+        Month3_money = (TextView) findViewById(R.id.Month3_money);
+
+        Entire entire = new Entire();
+        handlePost1(entire.getRootUrl(), entire.getRootBody(1,"2"));
+        handlePost2(entire.getRootUrl(), entire.getRootBody(1,"3"));
+        handlePost3(entire.getRootUrl(), entire.getRootBody(1,"4"));
     }
+
+    public void handlePost1(String subUrl, String bodyString) {
+        Thread thread = new Thread() {
+            public void run() {
+                try {
+                    requestAPI = new RequestAPI();
+                    data = requestAPI.requestPost(subUrl, bodyString);
+                    JSONArray jsonArray1 = new JSONArray(data);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                txtMonth1.setText(jsonArray1.getJSONObject(0).getString("month"));
+                                Month1_money.setText(jsonArray1.getJSONObject(0).getString("spending"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
+                } catch (IOException | JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        thread.start();
+    }
+
+    public void handlePost2(String subUrl, String bodyString) {
+        Thread thread = new Thread() {
+            public void run() {
+                try {
+                    requestAPI = new RequestAPI();
+                    data = requestAPI.requestPost(subUrl, bodyString);
+                    JSONArray jsonArray2 = new JSONArray(data);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                txtMonth1.setText(jsonArray2.getJSONObject(0).getString("month"));
+                                Month1_money.setText(jsonArray2.getJSONObject(0).getString("spending"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
+                } catch (IOException | JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        thread.start();
+    }
+
+    public void handlePost3(String subUrl, String bodyString) {
+        Thread thread = new Thread() {
+            public void run() {
+                try {
+                    requestAPI = new RequestAPI();
+                    data = requestAPI.requestPost(subUrl, bodyString);
+                    JSONArray jsonArray3 = new JSONArray(data);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                txtMonth1.setText(jsonArray3.getJSONObject(0).getString("month"));
+                                Month1_money.setText(jsonArray3.getJSONObject(0).getString("spending"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
+                } catch (IOException | JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        thread.start();
+    }
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         barDrawerToggle.onOptionsItemSelected(item);
