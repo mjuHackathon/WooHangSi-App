@@ -242,6 +242,13 @@ public class BudgetCategory extends AppCompatActivity {
                 }, 5000);
             }
         });
+
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -302,5 +309,6 @@ public class BudgetCategory extends AppCompatActivity {
 
     }
 
+   
 
 }
