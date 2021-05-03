@@ -78,7 +78,7 @@
                             android:id="@+id/foodLastCost"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="50만원"
+                            android:text="500000"
                             android:textSize="10sp" />
 
                         <TextView
@@ -161,7 +161,7 @@
                             android:id="@+id/cafeLastCost"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="40만"
+                            android:text="400000"
                             android:textSize="10sp" />
 
                         <TextView
@@ -412,7 +412,7 @@
                             android:id="@+id/shoppingLastCost"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="40만원"
+                            android:text="400000"
                             android:textSize="10sp" />
 
                         <TextView
@@ -438,7 +438,7 @@
                         android:id="@+id/shoppingBudget"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="300000"
+                        android:text="360000"
                         android:textColor="#673AB7"
                         android:textSize="25sp" />
 
@@ -667,7 +667,7 @@
                             android:id="@+id/trafficLastCost"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="20만원"
+                            android:text="200000"
                             android:textSize="10sp" />
 
                         <TextView
