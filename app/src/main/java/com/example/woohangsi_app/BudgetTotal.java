@@ -90,10 +90,6 @@ public class BudgetTotal extends AppCompatActivity {
                         intent = new Intent(BudgetTotal.this, ConsumptionPattern.class);
                         startActivity(intent);
                         break;
-                    case R.id.MyPoint:
-                        intent = new Intent(BudgetTotal.this, EarnPoint.class);
-                        startActivity(intent);
-                        break;
                     case R.id.point_add:
                         intent = new Intent(BudgetTotal.this, BudgetCheck.class);
                         startActivity(intent);

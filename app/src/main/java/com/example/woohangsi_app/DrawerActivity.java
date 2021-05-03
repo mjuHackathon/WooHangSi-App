@@ -74,7 +74,11 @@ public class DrawerActivity extends AppCompatActivity {
                         intent = new Intent(DrawerActivity.this, ConsumptionPattern.class);
                         startActivity(intent);
                         break;
-                    case R.id.MyPoint:
+                    case R.id.point_add:
+                        intent = new Intent(DrawerActivity.this, BudgetCheck.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.point_inquiry:
                         intent = new Intent(DrawerActivity.this, EarnPoint.class);
                         startActivity(intent);
                         break;
