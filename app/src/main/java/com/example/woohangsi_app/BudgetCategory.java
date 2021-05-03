@@ -199,6 +199,8 @@ public class BudgetCategory extends AppCompatActivity {
         petBudget = (EditText) findViewById(R.id.petBudget);
         presentBudget = (EditText) findViewById(R.id.presentBudget);
 
+        leftBudget.setText(Budget.getText());
+
         layoutarray = new LinearLayout[] {food, cafe, alchol, life, shopping, fashion, beauty, traffic, car, house, health, capital, culture, travel, educate, children, pet, present};
 
         categoryArray = new String[] {"식비", "카페", "술/유흥", "생활", "온라인 쇼핑", "패션", "뷰티", "교통", "자동차", "주거/통신", "의료/건강", "금융",
@@ -247,6 +249,16 @@ public class BudgetCategory extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String num1 = Budget.getText().toString();
+                String num2 = trafficBudget.getText().toString();
+                String num3 = cafeBudget.getText().toString();
+                String num4 = foodBudget.getText().toString();
+                String num5 = shoppingBudget.getText().toString();
+
+                Integer result = Integer.parseInt(num1)-Integer.parseInt(num2)-Integer.parseInt(num3)-Integer.parseInt(num4)-Integer.parseInt(num5);
+
+                leftBudget.setText(result.toString());
+
                 for (int i=0; i<checkArray.length;i++) {
                     if (checkArray[i]==true) {
                         Category category = new Category();

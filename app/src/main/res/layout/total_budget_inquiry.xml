@@ -65,7 +65,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:textSize="40sp"
-        android:text="1500000"/>
+        android:text="2500000"/>
 
     <View
         android:layout_width="match_parent"

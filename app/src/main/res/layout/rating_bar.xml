@@ -49,8 +49,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:max="3000000"
-        android:progress="2250000" />
+        android:max="2500000"
+        android:progress="2200000" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="end"
-            android:text="3,000,000"
+            android:text="2,500,000"
             android:textAlignment="textEnd" />
     </LinearLayout>
 
@@ -114,8 +114,8 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:max="3000000"
-                    android:progress="500000" />
+                    android:max="450000"
+                    android:progress="300000" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -136,7 +136,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="end"
-                        android:text="3,000,000"
+                        android:text="450,000"
                         android:textAlignment="textEnd" />
                 </LinearLayout>
             </LinearLayout>
@@ -159,7 +159,7 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:max="3000000"
+                android:max="350000"
                 android:progress="100000" />
 
             <LinearLayout
@@ -181,7 +181,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="end"
-                    android:text="3,000,000"
+                    android:text="350,000"
                     android:textAlignment="textEnd" />
             </LinearLayout>
 
@@ -236,7 +236,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible">
+            android:visibility="gone">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -278,8 +278,7 @@
             android:id="@+id/shopping"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone">
+            android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -293,8 +292,8 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:max="30000"
-                android:progress="5000" />
+                android:max="300000"
+                android:progress="100000" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -315,7 +314,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="end"
-                    android:text="300000"
+                    android:text="300,000"
                     android:textAlignment="textEnd" />
             </LinearLayout>
         </LinearLayout>
@@ -425,8 +424,8 @@
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:max="3000000"
-                android:progress="150000" />
+                android:max="2000000"
+                android:progress="1500000" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -447,7 +446,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="end"
-                    android:text="3,000,000"
+                    android:text="200,000"
                     android:textAlignment="textEnd" />
             </LinearLayout>
         </LinearLayout>

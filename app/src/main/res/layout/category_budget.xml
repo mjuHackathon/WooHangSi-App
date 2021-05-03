@@ -60,7 +60,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            android:text = "2500000"/>
 
         <View
             android:layout_width="match_parent"
@@ -162,7 +163,7 @@
                                 android:id="@+id/foodLastCost"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"
+                                android:text="500000"
                                 android:textSize="10sp" />
 
                             <TextView
@@ -243,7 +244,7 @@
                                 android:id="@+id/cafeLastCost"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"
+                                android:text="400000"
                                 android:textSize="10sp" />
 
                             <TextView
@@ -452,8 +453,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:orientation="horizontal"
-                    android:visibility="gone">
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="80dp"
@@ -489,7 +489,7 @@
                                 android:id="@+id/shoppingLastCost"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"
+                                android:text="400000"
                                 android:textSize="10sp" />
 
                             <TextView
@@ -514,7 +514,7 @@
                             android:id="@+id/shoppingBudget"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:hint="0"
+                            android:text="360000"
                             android:textColor="#673AB7"
                             android:textSize="25sp" />
 
@@ -735,7 +735,7 @@
                                 android:id="@+id/trafficLastCost"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"
+                                android:text="200000"
                                 android:textSize="10sp" />
 
                             <TextView
