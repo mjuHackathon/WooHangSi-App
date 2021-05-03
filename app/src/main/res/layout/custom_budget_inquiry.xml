@@ -106,10 +106,10 @@
                     <TextView
                         android:id="@+id/brand_budget1"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="150000"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -117,7 +117,7 @@
                         android:layout_marginRight="8dp"
                         android:text="원"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -196,7 +196,7 @@
                         android:layout_height="match_parent"
                         android:text="10000"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -204,7 +204,7 @@
                         android:layout_marginRight="8dp"
                         android:text="원"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -283,7 +283,7 @@
                         android:layout_height="match_parent"
                         android:text="9000"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -291,7 +291,7 @@
                         android:layout_marginRight="8dp"
                         android:text="원"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -370,7 +370,7 @@
                         android:layout_height="match_parent"
                         android:text="5000"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -378,7 +378,7 @@
                         android:layout_marginRight="8dp"
                         android:text="원"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -457,7 +457,7 @@
                         android:layout_height="match_parent"
                         android:text="5000"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -465,7 +465,7 @@
                         android:layout_marginRight="8dp"
                         android:text="원"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -544,7 +544,7 @@
                         android:layout_height="match_parent"
                         android:text="150000"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -552,7 +552,7 @@
                         android:layout_marginRight="8dp"
                         android:text="원"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="20sp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
