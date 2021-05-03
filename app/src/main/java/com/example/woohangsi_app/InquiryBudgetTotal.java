@@ -88,10 +88,6 @@ public class InquiryBudgetTotal extends AppCompatActivity {
                         intent = new Intent(InquiryBudgetTotal.this, ConsumptionPattern.class);
                         startActivity(intent);
                         break;
-                    case R.id.MyPoint:
-                        intent = new Intent(InquiryBudgetTotal.this, EarnPoint.class);
-                        startActivity(intent);
-                        break;
                     case R.id.point_add:
                         intent = new Intent(InquiryBudgetTotal.this, BudgetCheck.class);
                         startActivity(intent);
@@ -140,7 +136,7 @@ public class InquiryBudgetTotal extends AppCompatActivity {
         Thread thread = new Thread() {
             public void run() {
                 try {
-                    requestAPI = new RequestAPI();
+                   requestAPI = new RequestAPI();
                     data = requestAPI.requestPost(subUrl, bodyString);
                     JSONArray jsonArray1 = new JSONArray(data);
                     runOnUiThread(new Runnable() {

@@ -74,10 +74,6 @@ public class BudgetMonthly extends AppCompatActivity {
                         intent = new Intent(BudgetMonthly.this, ConsumptionPattern.class);
                         startActivity(intent);
                         break;
-                    case R.id.MyPoint:
-                        intent = new Intent(BudgetMonthly.this, EarnPoint.class);
-                        startActivity(intent);
-                        break;
                     case R.id.point_add:
                         intent = new Intent(BudgetMonthly.this, BudgetCheck.class);
                         startActivity(intent);

@@ -72,10 +72,6 @@ public class EarnPoint extends AppCompatActivity {
                         intent = new Intent(EarnPoint.this, ConsumptionPattern.class);
                         startActivity(intent);
                         break;
-                    case R.id.MyPoint:
-                        intent = new Intent(EarnPoint.this, EarnPoint.class);
-                        startActivity(intent);
-                        break;
                     case R.id.point_add:
                         intent = new Intent(EarnPoint.this, BudgetCheck.class);
                         startActivity(intent);

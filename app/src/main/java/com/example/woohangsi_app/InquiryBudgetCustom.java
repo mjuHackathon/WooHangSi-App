@@ -73,10 +73,6 @@ public class InquiryBudgetCustom extends AppCompatActivity {
                         intent = new Intent(InquiryBudgetCustom.this, ConsumptionPattern.class);
                         startActivity(intent);
                         break;
-                    case R.id.MyPoint:
-                        intent = new Intent(InquiryBudgetCustom.this, EarnPoint.class);
-                        startActivity(intent);
-                        break;
                     case R.id.point_add:
                         intent = new Intent(InquiryBudgetCustom.this, BudgetCheck.class);
                         startActivity(intent);

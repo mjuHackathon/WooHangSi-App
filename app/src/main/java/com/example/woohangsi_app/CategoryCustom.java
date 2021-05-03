@@ -82,10 +82,6 @@ public class CategoryCustom extends AppCompatActivity {
                         intent = new Intent(CategoryCustom.this, ConsumptionPattern.class);
                         startActivity(intent);
                         break;
-                    case R.id.MyPoint:
-                        intent = new Intent(CategoryCustom.this, EarnPoint.class);
-                        startActivity(intent);
-                        break;
                     case R.id.point_add:
                         intent = new Intent(CategoryCustom.this, BudgetCheck.class);
                         startActivity(intent);
