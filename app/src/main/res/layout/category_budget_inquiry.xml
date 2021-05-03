@@ -103,9 +103,9 @@
                         android:id="@+id/foodBudget"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="45만"
+                        android:text="450000"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="25sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -113,7 +113,7 @@
                         android:layout_marginRight="15dp"
                         android:text="원"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="25sp" />
                 </LinearLayout>
 
 
@@ -187,9 +187,9 @@
                         android:id="@+id/cafeBudget"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="35만"
+                        android:text="350000"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="25sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -197,7 +197,7 @@
                         android:layout_marginRight="15dp"
                         android:text="원"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="25sp" />
                 </LinearLayout>
 
 
@@ -438,9 +438,9 @@
                         android:id="@+id/shoppingBudget"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="30만"
+                        android:text="300000"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="25sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -448,7 +448,7 @@
                         android:text="원"
                         android:textColor="#673AB7"
                         android:layout_marginRight="15dp"
-                        android:textSize="30sp" />
+                        android:textSize="25sp" />
                 </LinearLayout>
 
 
@@ -693,9 +693,9 @@
                         android:id="@+id/trafficBudget"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20만"
+                        android:text="200000"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="25sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -703,7 +703,7 @@
                         android:layout_marginRight="15dp"
                         android:text="원"
                         android:textColor="#673AB7"
-                        android:textSize="30sp" />
+                        android:textSize="25sp" />
                 </LinearLayout>
 
 
